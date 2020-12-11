@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>LP2-semana02</display-name>
+  <!-- Establecer el archivo de bienvenida, tenemos varias opciones -->
+  <welcome-file-list>
+    <welcome-file>logueo.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Registrar el servlet LogueoServlet -->
+  <servlet>
+    <description></description>
+    <display-name>LogueoServlet</display-name>
+    <servlet-name>LogueoServlet</servlet-name>
+    <servlet-class>aprendamos.java.servlets.LogueoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogueoServlet</servlet-name>
+    <url-pattern>/logueo</url-pattern>
+    <url-pattern>/sisepuede</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Configurar el tiempo de inactividad de la sesión -->
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  
+  <!-- Registrar el servlet MantenerClienteServlet -->
+  <servlet>
+    <description></description>
+    <display-name>MantenerClienteServlet</display-name>
+    <servlet-name>MantenerClienteServlet</servlet-name>
+    <servlet-class>aprendamos.java.servlets.MantenerClienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MantenerClienteServlet</servlet-name>
+    <url-pattern>/mantenimiento</url-pattern>
+  </servlet-mapping>
+</web-app>
